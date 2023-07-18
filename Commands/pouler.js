@@ -42,11 +42,6 @@ module.exports = {
       );
     }
   },
-
-  async on_message(message) {
-    console.log(message);
-    reactChicky(message);
-  },
 };
 
 function remainingHours(time) {
@@ -73,15 +68,7 @@ function alert() {
   return text;
 }
 
-function isThursday() {
+export function isThursday() {
   let thursday = 2;
   return new Date().getDay() === thursday;
-}
-
-function reactChicky(message) {
-  if (isThursday) react(message, ":hatched_chick:");
-}
-
-function react(message, emoji) {
-  message.react(emoji);
 }
